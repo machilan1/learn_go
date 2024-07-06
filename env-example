@@ -1,0 +1,6 @@
+DB_NAME=goprc
+DB_HOST=localhost
+DB_PORT=5436
+DB_USER=postgres
+DB_PASS=123456 
+DB_URL="postgres://${DB_USER}:${DB_PASS}@${DB_HOST}:${DB_PORT}/${DB_NAME}?sslmode=disable"
