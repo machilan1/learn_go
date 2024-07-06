@@ -25,15 +25,13 @@ func (app *application) home(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-// This is a space holder. This will be removed eventually.
-//
-// 這個值是暫時的，未來會刪掉。暫時先設為 1  .
-const TEMP_SNIPPET_ID int = 1
-
 // Returns a snippet
 func (app *application) snippetView(w http.ResponseWriter, r *http.Request) {
 
-	snp, err := app.store.SnippetStore.FindSnippet(TEMP_SNIPPET_ID)
+	// !這個值是暫時的，未來會刪掉。暫時先設為 1  .
+	const _SNIPPET_ID int = 1
+
+	snp, err := app.store.SnippetStore.FindSnippet(_SNIPPET_ID)
 	if err != nil {
 		app.serverError(w, r, err)
 	}

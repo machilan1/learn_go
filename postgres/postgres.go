@@ -9,6 +9,7 @@ type Store struct {
 	*SnippetStore
 }
 
+// A Store factory func
 func NewStore(databaseSrc string) (*Store, error) {
 	db, err := sqlx.Open("postgres", databaseSrc)
 	if err != nil {

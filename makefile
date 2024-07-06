@@ -1,3 +1,5 @@
+API_PORT=8080 
+
 default: init run
 	
 run:
@@ -7,3 +9,5 @@ init:
 	go mod tidy
 
 .PHONY: default run init
+
+
